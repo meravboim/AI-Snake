@@ -1,10 +1,12 @@
 import pygame
 import pandas as pd
+import time
 
 # Create the CSV file
 def new_dat_f(dta_sts_mat):
     df = pd.DataFrame(dta_sts_mat)
-    df.to_csv("DataSets.csv", header=None, index=None)
+    date=time.strftime("%Y-%m-%d %H-%M-%S")
+    df.to_csv("DataSet "+date+".csv", header=None, index=None)
 
 
 # This class represents the game board.
